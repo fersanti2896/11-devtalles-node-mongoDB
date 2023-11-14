@@ -8,6 +8,7 @@ resultados/*.txt
 # Only exists if Bazel was run
 /bazel-out
 logs/
+mongo/
 
 # dependencies
 /node_modules

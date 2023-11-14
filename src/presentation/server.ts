@@ -13,7 +13,7 @@ const emailService = new EmailService();
 
 export class Server {
     public static start() {
-        console.log('Server started...')
+        console.log('Server started!!...')
 
         /* Mandando email */
         // new SendEmailLogs(emailService, fileSystemLogRepository).execute(['fersanti2896@gmail.com']);
