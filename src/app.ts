@@ -1,6 +1,6 @@
 import 'dotenv/config'
 import { Server } from './presentation/server';
-import { MongoDatabase } from './data/mongo';
+import { LogModel, MongoDatabase } from './data/mongo';
 import { envs } from './config/plugins/envs.plugin';
 
 (async() => {
@@ -13,5 +13,17 @@ async function main() {
         dbName: envs.MONGO_DB_NAME
     });
     
-    Server.start();    
+    /* Crear un registro */
+    // const newLog = await LogModel.create({
+    //     message: 'Test message from Mongo 5',
+    //     origin: 'App.ts',
+    //     level: 'low'
+    // });
+
+    // await newLog.save();
+
+    // const logs = await LogModel.find();
+    // console.log({ logs })
+
+    // Server.start();    
 }
