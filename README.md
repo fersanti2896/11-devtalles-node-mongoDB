@@ -15,7 +15,11 @@ Se aplica la integración de base de datos con MongoDB y PostgreSQL en nuestra a
 npm install
 ```
 2. Renombrar el archiv `.env.template` a `.env` y definir las variables de entorno.
-3. Ejecutar la aplicación. 
+3. Levantar las bases de datos con el comando: 
+```
+docker compose up -d
+```
+4. Ejecutar la aplicación. 
 ```
 npm run dev
 ```

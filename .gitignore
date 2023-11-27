@@ -9,6 +9,7 @@ resultados/*.txt
 /bazel-out
 logs/
 mongo/
+/postgres
 
 # dependencies
 /node_modules
