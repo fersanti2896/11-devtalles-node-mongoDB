@@ -26,16 +26,16 @@ async function main() {
     // const logs = await LogModel.find();
     // console.log({ logs })
 
-    // Server.start();  
+    Server.start();  
     
-    const prisma = new PrismaClient();
-    const newLog = await prisma.logModel.create({
-        data: {
-            level: 'HIGH',
-            message: 'Test message',
-            origin: 'App.ts'
-        }
-    });
+    // const prisma = new PrismaClient();
+    // const newLog = await prisma.logModel.create({
+    //     data: {
+    //         level: 'HIGH',
+    //         message: 'Test message',
+    //         origin: 'App.ts'
+    //     }
+    // });
 
     // const logs = await prisma.logModel.findMany();
 
