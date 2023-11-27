@@ -2,6 +2,7 @@ import 'dotenv/config'
 import { Server } from './presentation/server';
 import { LogModel, MongoDatabase } from './data/mongo';
 import { envs } from './config/plugins/envs.plugin';
+import { PrismaClient } from '@prisma/client';
 
 (async() => {
     main();
@@ -25,5 +26,18 @@ async function main() {
     // const logs = await LogModel.find();
     // console.log({ logs })
 
-    Server.start();    
+    // Server.start();  
+    
+    const prisma = new PrismaClient();
+    const newLog = await prisma.logModel.create({
+        data: {
+            level: 'HIGH',
+            message: 'Test message',
+            origin: 'App.ts'
+        }
+    });
+
+    // const logs = await prisma.logModel.findMany();
+
+    // console.log(logs)
 }
